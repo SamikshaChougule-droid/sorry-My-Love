@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>My Apology</title>
 
 <style>
 body{
-margin-top:120px;
 font-family:Arial;
 text-align:center;
-background:linear-gradient(135deg,#ffd6e0,#ffc2d1);
+margin-top:120px;
+background:#ffd6e0;
 }
 
+h1{color:#ff4d6d}
+
 button{
-padding:14px 24px;
+padding:14px 26px;
+font-size:18px;
 border:none;
-border-radius:25px;
+border-radius:30px;
 background:#ff4d6d;
 color:white;
-font-size:18px;
 cursor:pointer;
 }
 
@@ -32,36 +35,33 @@ animation:float 6s linear infinite;
 100%{transform:translateY(-10vh)}
 }
 </style>
-
 </head>
 
 <body>
 
-<h1>My Apology 🥺💔</h1>
+<h1>I'm Really Sorry 🥺</h1>
 
 <p>
 I know I made a mistake.<br>
 I never wanted to hurt you.<br>
-You mean so much to me ❤️<br>
-I really hope you forgive me.
+You mean a lot to me ❤️<br>
+Please forgive me.
 </p>
 
-<button onclick="next()">Something I Want To Tell You 💕</button>
+<button onclick="nextPage()">Something I Want To Tell You</button>
 
 <script>
-
-function next(){
+function nextPage(){
 window.location.href="love.html";
 }
 
-for(let i=0;i<30;i++){
-let heart=document.createElement("div");
-heart.innerHTML="❤️";
-heart.className="heart";
-heart.style.left=Math.random()*100+"vw";
-document.body.appendChild(heart);
+for(let i=0;i<25;i++){
+let h=document.createElement("div");
+h.innerHTML="❤️";
+h.className="heart";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
 }
-
 </script>
 
 </body>
