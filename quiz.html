@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
-<title>Love Quiz</title>
+<title>A Small Quiz For You 💌</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -15,8 +16,10 @@ display:flex;
 justify-content:center;
 align-items:center;
 font-family:Poppins, sans-serif;
-background:#f6f7fb;
+background:linear-gradient(135deg,#f6f7fb,#e9ecf5);
 }
+
+/* card */
 
 .container{
 background:white;
@@ -27,43 +30,103 @@ box-shadow:0 10px 30px rgba(0,0,0,0.1);
 text-align:center;
 }
 
+/* heading */
+
+h1{
+font-size:36px;
+color:#333;
+margin-bottom:20px;
+}
+
+/* question */
+
+.question{
+font-size:20px;
+color:#555;
+margin-bottom:20px;
+}
+
+/* options */
+
 button{
-margin:10px;
-padding:12px 24px;
+display:block;
+width:100%;
+margin:10px 0;
+padding:14px;
+font-size:16px;
 border:none;
 border-radius:6px;
 background:#6c8ed9;
 color:white;
 cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
 background:#567ad0;
+transform:scale(1.03);
+}
+
+#result{
+margin-top:20px;
+font-size:18px;
+color:#444;
+}
+
+.nextBtn{
+margin-top:25px;
+display:none;
 }
 
 </style>
 </head>
 
+
 <body>
 
 <div class="container">
 
-<h1>Little Question</h1>
+<h1>Little Quiz For You 💖</h1>
 
-<p>Who loves you the most?</p>
+<div class="question">
+How special are you to me? 🥺
+</div>
 
-<button onclick="go()">Me ❤️</button>
-<button onclick="go()">Me 😄</button>
-<button onclick="go()">Me 🥺</button>
+<button onclick="checkAnswer(false)">Just a normal friend 🙂</button>
+<button onclick="checkAnswer(false)">Someone I know 😅</button>
+<button onclick="checkAnswer(true)">Someone very special to me 💞</button>
+<button onclick="checkAnswer(false)">I don't know 🤔</button>
+
+<div id="result"></div>
+
+<button class="nextBtn" onclick="nextPage()">Continue 💌</button>
 
 </div>
 
+
 <script>
-function go(){
-alert("Correct answer ❤️");
-window.location.href="forgive.html";
+
+function checkAnswer(correct){
+
+var result=document.getElementById("result");
+var next=document.querySelector(".nextBtn");
+
+if(correct){
+result.innerHTML="Correct 💖 You really are very special to me.";
+next.style.display="block";
 }
+else{
+result.innerHTML="Hmm not exactly 🥺 Try again.";
+}
+
+}
+
+function nextPage(){
+window.location.href="love.html";
+}
+
 </script>
 
 </body>
+
 </html>
